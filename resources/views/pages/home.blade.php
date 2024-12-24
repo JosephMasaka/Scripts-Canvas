@@ -11,6 +11,8 @@
     <meta name="keywords" content="software engineering, web development, " />
     <meta name="author" content="scripts&canvas" />
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <link rel="icon" href="{{ url("logos/scripts&canvas.png") }}" type="image/x-icon" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,99 +38,297 @@
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 </head>
 
-<body class="">
-    <header">
+<body>
+    <header>
 
         @include('partials.nav')
+        
+    </header>
 
-        <section class="hero-section">
-            <div class="overlay">
-                <div class="container text-start text-white">
-                    <h1>Transforming Vision <br>Into Reality</h1>
-                    <p>Your success is our business</p>
-                    <p><strong>237 Green Street, City</strong></p>
-                    <div class="cta-buttons mt-4">
-                        <a href="#" class="btn-login p-4">Get Started</a>
+    <section class="hero-section">
+        <div class="overlay">
+            
+        </div>
+        <div class="container text-start text-white hero-content py-5">
+            <h1 class="display-4 fw-bold mb-3">
+                Transforming <span class="text-highlight">Vision</span><br>Into Reality
+            </h1>
+            <p class="lead mb-4">Transforming ideas into innovative solutions, automating processes, <br>and scaling businesses for sustainable success.</p>
+            {{-- <p class="fw-semibold"><i class="bi bi-geo-alt-fill"></i> 237 Green Street, City</p> --}}
+            <div class="cta-buttons mt-4 d-flex gap-3">
+                <a href="#" class="btn-custom btn-lg px-5">Get Started</a>
+                {{-- <a href="#about" class="btn btn-outline-light btn-lg px-5">Learn More</a> --}}
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-2">What We Offer</h2>
+            <p class="fw-bold mb-5">Our Services</p>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-12">
+                    <div class="service-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-laptop-code custom-icons mb-5"></i>
+                        <h4>Web Development</h4>
+                        <p>We build responsive, fast, and secure websites tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="service-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-cogs custom-icons mb-5"></i>
+                        <h4>Automation Solutions</h4>
+                        <p>Streamline your processes with custom automation tools and workflows.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="service-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-chart-line mb-5 custom-icons"></i>
+                        <h4>Business Growth</h4>
+                        <p>Leverage our expertise to scale and expand your business efficiently.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-server mb-4 custom-icons mb-5"></i>
+                        <h4>Web Hosting</h4>
+                        <p>Reliable and secure hosting solutions to keep your website online and running smoothly.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="packages-section py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4 mt-4">Our Packages</h2>
+            <p class="text-white mb-5">Choose a package that fits your needs and budget. Designed to help you grow effortlessly.</p>
+            <div class="row g-4">
+                <!-- Basic Package -->
+                <div class="col-md-4">
+                    <div class="package-card p-4 shadow-sm bg-white rounded">
+                        <h3 class="fw-bold text-primary-custom mb-3">Basic</h3>
+                        <p class="text-muted">Perfect for individuals or small startups.</p>
+                        <h4 class="fw-bold mb-3 text-dark">$49/month</h4>
+                        <ul class="list-unstyled text-start mb-4 text-dark">
+                            <li><i class="fas fa-check text-success me-2"></i> 1 Website</li>
+                            <li><i class="fas fa-check text-success me-2"></i> 5GB Storage</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Basic Support</li>
+                        </ul>
+                        <a href="#" class="btn-custom-package btn-lg py-2 px-4">Get Started</a>
+                    </div>
+                </div>
+                <!-- Standard Package -->
+                <div class="col-md-4">
+                    <div class="package-card p-4 shadow-sm bg-white rounded">
+                        <h3 class="fw-bold text-primary-custom mb-3">Standard</h3>
+                        <p class="text-muted">Ideal for growing businesses and teams.</p>
+                        <h4 class="fw-bold mb-3 text-dark">$99/month</h4>
+                        <ul class="list-unstyled text-start mb-4 text-dark">
+                            <li><i class="fas fa-check text-success me-2"></i> 5 Websites</li>
+                            <li><i class="fas fa-check text-success me-2"></i> 50GB Storage</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Priority Support</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Free Domain</li>
+                        </ul>
+                        <a href="#" class="btn-custom-package btn-lg py-2 px-4">Get Started</a>
+                    </div>
+                </div>
+                <!-- Premium Package -->
+                <div class="col-md-4">
+                    <div class="package-card p-4 shadow-sm bg-white rounded">
+                        <h3 class="fw-bold text-primary-custom mb-3">Premium</h3>
+                        <p class="text-muted">Best for established businesses and enterprises.</p>
+                        <h4 class="fw-bold mb-3 text-dark">$199/month</h4>
+                        <ul class="list-unstyled text-start mb-4 text-dark">
+                            <li><i class="fas fa-check text-success me-2"></i> Unlimited Websites</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Unlimited Storage</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Dedicated Support</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Advanced Analytics</li>
+                        </ul>
+                        <a href="#" class=" btn-custom-package btn-lg py-2 px-4">Get Started</a>
                     </div>
                 </div>
             </div>
-        </section>
-        
-    </header>
+        </div>
+    </section>
+    
+    <section class="why-choose-us-section py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Why Choose Us</h2>
+            <p class="text-muted mb-5">Discover the benefits of working with our expert team and innovative solutions.</p>
+            <div class="row g-4">
+                <!-- Feature 1 -->
+                <div class="col-md-4">
+                    <div class="feature-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-user-shield fs-1  custom-icons mb-3"></i>
+                        <h4>Reliable Support</h4>
+                        <p>Our team is available 24/7 to address your concerns and provide assistance.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-4">
+                    <div class="feature-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-trophy fs-1  custom-icons mb-3"></i>
+                        <h4>Proven Expertise</h4>
+                        <p>Years of experience delivering top-notch solutions for various industries.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-4">
+                    <div class="feature-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-rocket fs-1  custom-icons mb-3"></i>
+                        <h4>Innovative Solutions</h4>
+                        <p>We bring creative and modern ideas to help your business stand out.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-4">
+                <!-- Feature 4 -->
+                <div class="col-md-4">
+                    <div class="feature-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-handshake fs-1  custom-icons mb-3"></i>
+                        <h4>Client-Centric Approach</h4>
+                        <p>We prioritize your goals and work collaboratively to achieve success.</p>
+                    </div>
+                </div>
+                <!-- Feature 5 -->
+                <div class="col-md-4">
+                    <div class="feature-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-chart-pie fs-1  custom-icons mb-3"></i>
+                        <h4>Data-Driven Results</h4>
+                        <p>Our strategies are backed by analytics to maximize efficiency and ROI.</p>
+                    </div>
+                </div>
+                <!-- Feature 6 -->
+                <div class="col-md-4">
+                    <div class="feature-card p-4 shadow-sm bg-white rounded">
+                        <i class="fas fa-thumbs-up fs-1  custom-icons mb-3"></i>
+                        <h4>Customer Satisfaction</h4>
+                        <p>We go the extra mile to ensure our clients are happy with the outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-details-section py-5 bg-light">
+        <div class="overlay"></div>
+        <div class="container">
+            
+            <h2 class="fw-bold text-center mb-4 text-white">Contact Details</h2>
+            <p class="text-center mb-5 text-white">We’d love to hear from you. Reach out to us through any of the methods below.</p>
+            <div class="row g-5">
+                <!-- Contact Details -->
+                <div class="col-md-6">
+                    <div class="row g-4">
+                        <!-- Location -->
+                        <div class="col-12">
+                            <div class="contact-card p-4 shadow-sm bg-white rounded text-center">
+                                <i class="fas fa-map-marker-alt fs-1  custom-icons mb-3"></i>
+                                <h5>Our Location</h5>
+                                <p>123 Business Avenue, Suite 101<br>Cityville, Country</p>
+                            </div>
+                        </div>
+                        <!-- Phone -->
+                        <div class="col-12">
+                            <div class="contact-card p-4 shadow-sm bg-white rounded text-center">
+                                <i class="fas fa-phone-alt fs-1 custom-icons mb-3"></i>
+                                <h5>Call Us</h5>
+                                <p>+1 234 567 890<br>+1 987 654 321</p>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="col-12">
+                            <div class="contact-card p-4 shadow-sm bg-white rounded text-center">
+                                <i class="fas fa-envelope fs-1 custom-icons mb-3"></i>
+                                <h5>Email Us</h5>
+                                <p>support@example.com<br>info@example.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div class="col-md-6">
+                    <div class="contact-form text-white">
+                        <h3 class="fw-bold mb-4">Send Us a Message</h3>
+                        <form class="text-start">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Enter your subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" class="form-control" rows="5" placeholder="Write your message here" required></textarea>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer-section bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">About Us</h5>
+                    <p>We are dedicated to delivering innovative solutions to help your business thrive. Let us be your partner in success.</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#services" class="text-light text-decoration-none">Our Services</a></li>
+                        <li><a href="#packages" class="text-light text-decoration-none">Packages</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="#about" class="text-light text-decoration-none">About Us</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="text-light fs-4"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-light fs-4"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-light fs-4"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-light fs-4"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2024 Your Company. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
     <style>
-        .overlay .container {
-            z-index: 10;
-        }
-
-        .hero-section {
-            z-index: -10;
-            top: -80px;
-            position: relative;
-            width: 100%;
-            height: 100vh; /* Full-screen height */
-            background: url('images/hero_bg.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .hero-section .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
-        }
-
-        .hero-section p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-section .cta-buttons a {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            /* border-radius: 5px; */
-            /* margin: 0 10px; */
-            text-decoration: none;
-            color: white;
-            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
-            text-transform: uppercase;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .hero-section .btn-login {
-            background-color: #28a745;
-            /* font-size: 16px; */
-        }
-
-        .hero-section .btn-login:hover {
-            cursor: pointer;
-            background-color: #218838;
-            transform: scale(1.05);
-        }
-
-        .hero-section .btn-signup {
-            background-color: #000;
-        }
-
+        
     </style>
+
 </body>
 </html>

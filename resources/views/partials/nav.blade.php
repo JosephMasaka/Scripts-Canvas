@@ -12,54 +12,30 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 font-weight-bold">
                 <li class="nav-item px-2">
-                    <a class="nav-link active" href="{{ route('home') }}">Home</a>
-                </li>
-                <li class="nav-item dash-item dash-hasmenu dropdown px-2">
-                    <a href="#" class="dash-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class=""><i class=""></i></span>
-                        <span class="dash-mtext">{{ __('Events') }}</span>
-                        <span class="dash-arrow"><i data-feather="chevron-right"></i></span>
-                    </a>
-                    <ul class="dropdown-menu dash-submenu">
-                        <li class="nav-item px-2">
-                            <a class="dash-link dropdown-item" href="">
-                                {{ __('Upcoming Events') }}
-                            </a>                            
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="dash-link dropdown-item" href="">
-                                {{ __('Past Events') }}
-                            </a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="dash-link dropdown-item" href="">
-                                {{ __('Ongoing Events') }}
-                            </a>
-                        </li>
-                    </ul>
+                    <a class="nav-link active px-4" href="{{ route('home') }}">Home</a>
                 </li>
                 
                 <li class="nav-item px-2">
-                    <a class="nav-link" href="">Merchandise</a>
+                    <a class="nav-link px-4" href="">Merchandise</a>
                 </li>
                 <li class="nav-item px-2">
-                    <a class="nav-link" href="">About us</a>
+                    <a class="nav-link px-4" href="">About us</a>
                 </li>
                 <li class="nav-item px-2">
-                    <a class="nav-link" href="#pricing">Contact</a>
+                    <a class="nav-link px-4" href="#pricing">Contact</a>
                 </li>
 
                 @if(Auth::check())
                     <li class="nav-item px-2"><a class="btn btn-light ms-2 me-1" href="">Dashboard</a></li>
                     <li class="nav-item px-2"><a class="btn btn-light ms-2 me-1" href="">Logout</a></li>
                 @else
-                    <li class="nav-item px-2"><a class="nav-link ms-2 me-1" href=""
-                        ><span class="fa-user">Login</span></a></li>
+                    <li class="nav-item px-2"><a class="btn-custom ms-2 me-1 px-5 py-2" href=""
+                        ><i class="fas fa-user mr-2"></i> Login</a></li>
                     {{-- @if (App\Models\Utility::getValByName('disable_signup_button') == 'on') --}}
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="btn btn-primary ms-2 me-1"
                                 href="">{{ __('Register') }}</a>
-                        </li>
+                        </li> --}}
                     {{-- @endif --}}
                 @endif
                 
@@ -109,7 +85,7 @@
 /* Hover effect for navbar links */
 .nav-link:hover {
     color: #fff; /* Change text color on hover */
-    background-color: #000;
+    background-color: rgb(128, 0, 0);
     border: none;
 }
 
