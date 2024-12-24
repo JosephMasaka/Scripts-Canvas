@@ -16,6 +16,32 @@ body{
     background: maroon;
 }
 
+.nav-link {
+    font-size: .9rem;
+}
+
+.navbar .dropdown-menu{
+    z-index: 10;
+    left: 0;
+    top: -100vh;
+    /* display: block; */
+    background-color: #000;
+    border-radius: 0;
+    border-top: 1px solid #fff;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar-dark{
+    /* border-bottom: 1px solid #fff; */
+    background-color: #000 !important;
+}
+
+.Dropdownhover {
+    display: block;
+    top: 12vh !important;
+    /* transition: all ease-in-out 2s; */
+}
+
 .btn-custom {
     border: 3px solid #fff;
     text-decoration: none;
