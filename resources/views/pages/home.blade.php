@@ -220,7 +220,7 @@
         <div class="overlay"></div>
         <div class="container">
             
-            <h2 class="fw-bold text-center mb-4 text-white">Contact Details</h2>
+            <h2 class="fw-bold text-center mb-4 text-white">Get In Touch</h2>
             <p class="text-center mb-5 text-white">We’d love to hear from you. Reach out to us through any of the methods below.</p>
             <div class="row g-5">
                 <!-- Contact Details -->
@@ -274,7 +274,7 @@
                                 <textarea id="message" class="form-control" rows="5" placeholder="Write your message here" required></textarea>
                             </div>
                             <div class="text-center mt-3">
-                                <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
+                                <button type="submit" class="btn btn-custom px-4 py-2">Send Message</button>
                             </div>
                         </form>
                     </div>
@@ -285,7 +285,7 @@
     
 
     <footer class="footer-section bg-dark text-light py-4">
-        <div class="container">
+        <div class="container pt-5">
             <div class="row">
                 <!-- Company Info -->
                 <div class="col-md-4">
@@ -322,7 +322,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <p class="mb-0">&copy; 2024 Your Company. All Rights Reserved.</p>
+                <p class="mb-0">&copy; 2024 Scripts&Canvas. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
