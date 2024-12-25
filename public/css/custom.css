@@ -198,3 +198,7 @@ body{
 footer{
     line-height: 2.5rem;
 }
+
+.text-justify {
+    text-align: justify;
+}

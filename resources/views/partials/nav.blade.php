@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0 font-weight-bold">
                 <li class="nav-item px-2">
-                    <a class="nav-link active px-4" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link px-4 {{ Request::routeIs('home') ? '' : 'active'}}" href="{{ route('home') }}">Home</a>
                 </li>
                 
                 <!------------------ Dropdown ------------------->
@@ -91,7 +91,7 @@
                     <a class="nav-link px-4" href="">Services</a>
                 </li> --}}
                 <li class="nav-item px-2">
-                    <a class="nav-link px-4" href="">About us</a>
+                    <a class="nav-link px-4 {{ Request::routeIs('aboutus') ? 'active' : ''}}" href="{{ route('aboutus') }}">About us</a>
                 </li>
                 <li class="nav-item px-2">
                     <a class="nav-link px-4" href="#pricing">Contact</a>
